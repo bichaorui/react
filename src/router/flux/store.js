@@ -1,6 +1,13 @@
-function store () {
+import React from "react";
+import {useState, useEffect, useContext } from 'react';
+const Store = React.createContext();
 
-	return [
+export default Store;
 
-	]
-}
+
+// function store () {
+//
+// 	return [
+//
+// 	]
+// }

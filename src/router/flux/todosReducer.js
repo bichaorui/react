@@ -10,6 +10,11 @@ function todosReducer(state, action) {
 				text: action.text,
 				completed: false
 			}];
+		case 'GETLIST':
+			return [...state, {
+				text: action.text,
+				completed: false
+			}];
 		default:
 			return state;
 	}

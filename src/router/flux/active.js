@@ -3,18 +3,6 @@ import useReducer from './useReducer';
 
 function Actives (Component) {
 	const [store, dispatch] = useReducer(todosReducer, []);
-
-	// const rudeux = [
-	// 	store,
-	// 	{
-	// 		addList: (e) => {
-	// 			console.log('____________active', e);
-	// 			dispatch({type: 'add', e});
-	// 		},
-	// 		/* more active */
-	// 	}
-	// ]
-
 	return [
 		store,
 		{
