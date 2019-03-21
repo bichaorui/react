@@ -1,41 +1,22 @@
 import React from "react";
 import {useState, useEffect} from 'react';
 
-function Example() {
-  const isOnline = useExample(123);
-  console.log(React);
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    console.log(count);
-    return () => {
-      console.log('end!');
-    }
-  });
-  return (
-    <div>
-      {isOnline}
-      <p>点击了{count}次</p>
-      <button
-        onClick={() => setCount(count + 1)}
-      >点我</button>
-    </div>
-  )
+import Active from './flux/active';
+import index2 from './index2'
+import Context from './context'
+function APP () {
+	// const [store, actives] = Active();
+	// console.log('index1', store, actives);
+	// const APP2 = index2();
+	return (
+		<Context.Provider >
+			<div className="APP">
+				{/*{store.length}*/}
+				{/*<button onClick={()=>actives.addList(123)}>点击</button>*/}
+				{/*{APP2}*/}
+			</div>
+		</Context.Provider >
+	)
 }
 
-export default Example;
-
-
-function useExample(ID) {
-  const [isOnline, setIsOnlie] = useState(false);
-
-  function handleStatus(status) {
-    setIsOnlie(status.isOnline)
-  }
-
-  useEffect(() => {
-    console.log('useExample');
-    handleStatus({isOnline: true})
-  });
-
-  return isOnline
-}
+export default APP;
