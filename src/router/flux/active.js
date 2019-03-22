@@ -7,7 +7,7 @@ function Actives (Component) {
 		store,
 		{
 			addList: (e) => {
-				console.log('____________active', e);
+				// console.log('____________active', e);
 				dispatch({type: 'add', text: e});
 			},
 			/* more active */

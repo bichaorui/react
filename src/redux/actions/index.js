@@ -1,7 +1,11 @@
-import userAction from './user';
 
 export default (dispatchFun) => {
 	return {
-		user: userAction(dispatchFun, 'user')
+		add: data => {
+			dispatchFun({
+				TYPE: 'add',
+				DATA: data
+			})
+		}
 	}
 }

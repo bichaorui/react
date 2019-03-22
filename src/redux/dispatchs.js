@@ -1,18 +1,17 @@
 
 export default (state, action) => {
 	console.log('__________dispatchs', state, action);
-	switch (action.type) {
+	const {DATA, TYPE} = action;
+	switch (TYPE) {
 		case 'add':
 			return [...state, {
-				text: action.text,
+				data: DATA,
 				completed: false
 			}];
-		case 'GETLIST':
-			return ['1','2'];
-			// return [...state, {
-			// 	text: action.text,
-			// 	completed: false
-			// }];
+		case 'ADD':
+			return Object.assign({}, state, {
+				data: DATA
+			});
 		default:
 			return state;
 	}

@@ -1,37 +1,24 @@
 import React from "react";
 import {useState} from 'react';
 
-import dispatchs from './dispatchs'
-import action from './actions/index'
+import action from './actions/index';
+import dispatchs from './dispatchs/index';
 
-const initialState = {
-	user: {},
+let initialState = {
+	user: {
+		name: 'jack'
+	}
 };
 
 export default () => {
 	const [state, setState] = useState(initialState);
 
-	function dispatchFun(action) {
+	const actions = action((action) => {
 		const dispatchProps = dispatchs(state, action);
-		console.log(dispatchProps);
 		setState(dispatchProps)
-	}
-
-	const actions = action(dispatchFun);
-	console.log(state);
+	});
 	return [
 		state,
 		actions
 	]
-
 }
-
-
-
-
-
-
-
-
-
-
