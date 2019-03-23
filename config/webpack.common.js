@@ -29,6 +29,12 @@ module.exports = {
 					'css-loader'
 				]
 			},
+      {
+        enforce: "pre",
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
+      },
 			{
 				test: /(\.jsx|\.js)$/,
 				exclude: /node_modules/,

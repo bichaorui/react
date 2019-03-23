@@ -1,12 +1,11 @@
 import React from "react";
-import {useState, useEffect, useContext} from 'react';
+import {useContext} from 'react';
 
 import {ReduxContext} from './../redux/index'
 
 
 function Counter () {
-	const {Store, Action} = useContext(ReduxContext);
-	console.log(Store, Action);
+	const {Action} = useContext(ReduxContext);
 	const {add = () => {}} = Action && Action;
 	return (
 		<div>

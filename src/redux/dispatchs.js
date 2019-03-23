@@ -1,6 +1,5 @@
 
 export default (state, action) => {
-	console.log('__________dispatchs', state, action);
 	const {DATA, TYPE} = action;
 	switch (TYPE) {
 		case 'add':

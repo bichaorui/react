@@ -4,7 +4,6 @@
 * */
 
 import React from "react";
-import {useState, useEffect, useContext} from 'react';
 
 import store from './store'
 
@@ -12,10 +11,11 @@ const ReduxContext = React.createContext();
 const {Provider} = ReduxContext;
 
 const ProviderProps = (props) => {
+  const {children} = {...props};
 	const [Store, Action] = store();
 	return (
 		<Provider value={{Store, Action}}>
-			{props && props.children}
+			{children}
 		</Provider>
 	)
 };
