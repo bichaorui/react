@@ -1,9 +1,11 @@
 import ReactDOM from 'react-dom';
 import React, {Component} from 'react';
 
-// import Main from './router/index'
-// import Main from './router2/index'
-import Main from './dome3/index'
+import './styles/initialize.scss';
+import './styles/mixins.scss';
+import './styles/variable.scss';
+
+import Main from './router/index'
 
 ReactDOM.render(
   <Main/>,
