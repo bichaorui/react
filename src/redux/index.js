@@ -13,6 +13,7 @@ const {Provider} = ReduxContext;
 const ProviderProps = (props) => {
   const {children} = {...props};
 	const [Store, Action] = store();
+	console.log(Store, Action);
 	return (
 		<Provider value={{Store, Action}}>
 			{children}
