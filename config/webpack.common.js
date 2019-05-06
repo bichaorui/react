@@ -2,6 +2,10 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+function resolve (dir) {
+	return path.join(__dirname, '..', dir)
+}
+
 module.exports = {
 	entry: {
 		index: './src/index.js'
@@ -86,7 +90,12 @@ module.exports = {
 				]
 			}
 		]
-	}
+	},
+	resolve: {
+		alias: {
+			'@': resolve('src'),
+		},
+	},
 };
 
 

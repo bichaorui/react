@@ -6,8 +6,12 @@ import './styles/mixins.scss';
 import './styles/variable.scss';
 
 import Main from './router/index'
+import {ProviderProps} from '@/redux/index'
 
 ReactDOM.render(
-  <Main/>,
+  <ProviderProps>
+    <Main/>
+  </ProviderProps>
+  ,
   document.getElementById("root")
 );
